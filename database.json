@@ -1,0 +1,294 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"firstName": "John",
+			"lastName": "Doe",
+			"email": "john.doe@example.com",
+			"phone": "123-456-7890",
+			"password": "hashed_password"
+		},
+		{
+			"id": 2,
+			"firstName": "Jane",
+			"lastName": "Smith",
+			"email": "jane.smith@example.com",
+			"phone": "987-654-3210",
+			"password": "hashed_password"
+		}
+	],
+	"userRoles": [
+		{
+			"id": 1,
+			"userId": 1,
+			"roleId": 1
+		},
+		{
+			"id": 2,
+			"userId": 2,
+			"roleId": 3
+		},
+		{
+			"id": 3,
+			"userId": 1,
+			"roleId": 2
+		}
+	],
+	"customers": [
+		{
+			"id": 1,
+			"companyName": "ABC Company",
+			"address": "123 Main Street",
+			"companyPhone": "555-123-4567",
+			"userId": 1,
+			"leadId": 1
+		},
+		{
+			"id": 2,
+			"companyName": "XYZ Corp",
+			"address": "456 Oak Avenue",
+			"companyPhone": "555-987-6543",
+			"userId": 2,
+			"leadId": 2
+		}
+	],
+	"invoices": [
+		{
+			"id": 1,
+			"orderId": 1,
+			"status": 1,
+			"sentDate": "2023-07-15",
+			"paidDate": "2023-07-20",
+			"employeeId": 1
+		},
+		{
+			"id": 2,
+			"orderId": 2,
+			"status": 2,
+			"sentDate": "2023-07-16",
+			"paidDate": null,
+			"employeeId": 2
+		}
+	],
+	"invoiceStatuses": [
+		{
+			"id": 1,
+			"current": "Sent"
+		},
+		{
+			"id": 2,
+			"current": "Paid"
+		}
+	],
+	"employees": [
+		{
+			"id": 1,
+			"userId": 1,
+			"payRate": 25,
+			"gender": "Male",
+			"hireDate": "2022-01-10",
+			"locationId": 1
+		},
+		{
+			"id": 2,
+			"userId": 2,
+			"payRate": 30,
+			"gender": "Female",
+			"hireDate": "2022-03-20",
+			"locationId": 2
+		}
+	],
+	"locations": [
+		{
+			"id": 1,
+			"name": "Scranton Branch",
+			"address": "789 Elm Street",
+			"phone": "555-789-1234",
+			"managerId": 1
+		},
+		{
+			"id": 2,
+			"name": "New York Branch",
+			"address": "321 Maple Avenue",
+			"phone": "555-456-7890",
+			"managerId": 2
+		}
+	],
+	"roles": [
+		{
+			"id": 1,
+			"name": "Admin"
+		},
+		{
+			"id": 2,
+			"name": "Employee"
+		},
+		{
+			"id": 3,
+			"name": "Customer"
+		},
+		{
+			"id": 4,
+			"name": "Salesperson"
+		},
+		{
+			"id": 5,
+			"name": "Manager"
+		},
+		{
+			"id": 6,
+			"name": "DeliveryPerson"
+		}
+	],
+	"orders": [
+		{
+			"id": 1,
+			"employeeId": 1,
+			"customerId": 1,
+			"orderDate": "2023-07-10",
+			"status": "Completed",
+			"totalAmount": 500
+		},
+		{
+			"id": 2,
+			"employeeId": 2,
+			"customerId": 2,
+			"orderDate": "2023-07-12",
+			"status": "Shipped",
+			"totalAmount": 750
+		}
+	],
+	"products": [
+		{
+			"id": 1,
+			"name": "Product A",
+			"description": "Description of Product A",
+			"unitPrice": 20,
+			"stockQuantity": 100,
+			"weightLbs": 2
+		},
+		{
+			"id": 2,
+			"name": "Product B",
+			"description": "Description of Product B",
+			"unitPrice": 15,
+			"stockQuantity": 50,
+			"weightLbs": 1
+		}
+	],
+	"orderItems": [
+		{
+			"id": 1,
+			"orderId": 1,
+			"productId": 1,
+			"quantity": 3,
+			"lineTotal": 60
+		},
+		{
+			"id": 2,
+			"orderId": 1,
+			"productId": 2,
+			"quantity": 2,
+			"lineTotal": 30
+		},
+		{
+			"id": 3,
+			"orderId": 2,
+			"productId": 1,
+			"quantity": 5,
+			"lineTotal": 100
+		}
+	],
+	"leads": [
+		{
+			"id": 1,
+			"assignedEmployeeId": 1,
+			"companyName": "LeadCo Inc.",
+			"contactName": "John Doe",
+			"contactEmail": "john.doe@leadco.com",
+			"contactPhone": "555-111-2222",
+			"address": "123 Lead Street",
+			"companyPhone": "555-333-4444",
+			"statusId": 1
+		},
+		{
+			"id": 2,
+			"assignedEmployeeId": 2,
+			"companyName": "ProspectCo",
+			"contactName": "Jane Smith",
+			"contactEmail": "jane.smith@prospectco.com",
+			"contactPhone": "555-555-5555",
+			"address": "456 Prospect Avenue",
+			"companyPhone": "555-777-8888",
+			"statusId": 2
+		}
+	],
+	"leadStatus": [
+		{
+			"id": 1,
+			"current": "Open"
+		},
+		{
+			"id": 2,
+			"current": "Converted"
+		}
+	],
+	"comments": [
+		{
+			"id": 1,
+			"employeeId": 1,
+			"noteDate": "2023-07-05",
+			"content": "Follow-up call scheduled.",
+			"refTable": "leads",
+			"refId": 1
+		},
+		{
+			"id": 2,
+			"employeeId": 2,
+			"noteDate": "2023-07-08",
+			"content": "Sent proposal via email.",
+			"refTable": "leads",
+			"refId": 2
+		}
+	],
+	"chatMessages": [
+		{
+			"id": 1,
+			"recipientId": 1,
+			"senderId": 2,
+			"messageDate": "2023-07-15",
+			"content": "Hi John! How can I assist you today?"
+		},
+		{
+			"id": 2,
+			"recipientId": 2,
+			"senderId": 1,
+			"messageDate": "2023-07-16",
+			"content": "Hello Jane! Is there anything I can help you with?"
+		}
+	],
+	"announcements": [
+		{
+			"id": 1,
+			"posterId": 1,
+			"announcementDate": "2023-07-10",
+			"content": "Team meeting scheduled for tomorrow at 2 PM."
+		},
+		{
+			"id": 2,
+			"posterId": 2,
+			"announcementDate": "2023-07-12",
+			"content": "Reminder: Submit weekly reports by Friday."
+		}
+	],
+	"usersUserRoles": [
+		{
+			"usersId": 1,
+			"userRolesUserId": 1
+		},
+		{
+			"usersId": 2,
+			"userRolesUserId": 2
+		}
+	]
+}
