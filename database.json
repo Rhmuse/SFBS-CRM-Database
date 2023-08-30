@@ -1,337 +1,697 @@
 {
-	"users": [
-		{
-			"id": 1,
-			"firstName": "John",
-			"lastName": "Doe",
-			"email": "john.doe@example.com",
-			"phone": "123-456-7890"
-		},
-		{
-			"id": 2,
-			"firstName": "Jane",
-			"lastName": "Smith",
-			"email": "jane.smith@example.com",
-			"phone": "987-654-3210"
-		},
-		{
-			"firstName": "Dalton",
-			"lastName": "Carrion",
-			"phone": "555-555-5555",
-			"email": "dalton.carrion@email.com",
-			"id": 3
-		}
-	],
-	"userRoles": [
-		{
-			"id": 1,
-			"userId": 1,
-			"roleId": 1
-		},
-		{
-			"id": 2,
-			"userId": 2,
-			"roleId": 3
-		},
-		{
-			"id": 3,
-			"userId": 1,
-			"roleId": 2
-		},
-		{
-			"userId": 3,
-			"roleId": 2,
-			"id": 4
-		},
-		{
-			"userId": 3,
-			"roleId": 4,
-			"id": 5
-		}
-	],
-	"customers": [
-		{
-			"id": 1,
-			"companyName": "ABC Company",
-			"address": "123 Main Street",
-			"companyPhone": "555-123-4567",
-			"userId": 1,
-			"leadId": 1
-		},
-		{
-			"id": 2,
-			"companyName": "XYZ Corp",
-			"address": "456 Oak Avenue",
-			"companyPhone": "555-987-6543",
-			"userId": 2,
-			"leadId": 2
-		}
-	],
-	"invoices": [
-		{
-			"id": 1,
-			"orderId": 1,
-			"status": 1,
-			"sentDate": "2023-07-15",
-			"paidDate": "2023-07-20",
-			"employeeId": 1
-		},
-		{
-			"id": 2,
-			"orderId": 2,
-			"status": 2,
-			"sentDate": "2023-07-16",
-			"paidDate": null,
-			"employeeId": 2
-		}
-	],
-	"invoiceStatuses": [
-		{
-			"id": 1,
-			"current": "Sent"
-		},
-		{
-			"id": 2,
-			"current": "Paid"
-		}
-	],
-	"employees": [
-		{
-			"id": 1,
-			"userId": 1,
-			"payRate": 25,
-			"gender": "Male",
-			"hireDate": "2022-01-10",
-			"locationId": 1
-		},
-		{
-			"id": 2,
-			"userId": 2,
-			"payRate": 30,
-			"gender": "Female",
-			"hireDate": "2022-03-20",
-			"locationId": 2
-		},
-		{
-			"userId": 3,
-			"payRate": 20,
-			"gender": "Male",
-			"hireDate": "2023-07-21",
-			"locationId": 2,
-			"id": 3
-		}
-	],
-	"locations": [
-		{
-			"id": 1,
-			"name": "Scranton Branch",
-			"address": "789 Elm Street",
-			"phone": "555-789-1234",
-			"managerId": 1
-		},
-		{
-			"id": 2,
-			"name": "New York Branch",
-			"address": "321 Maple Avenue",
-			"phone": "555-456-7890",
-			"managerId": 2
-		}
-	],
-	"roles": [
-		{
-			"id": 1,
-			"name": "Admin"
-		},
-		{
-			"id": 2,
-			"name": "Employee"
-		},
-		{
-			"id": 3,
-			"name": "Customer"
-		},
-		{
-			"id": 4,
-			"name": "Salesperson"
-		},
-		{
-			"id": 5,
-			"name": "Manager"
-		},
-		{
-			"id": 6,
-			"name": "DeliveryPerson"
-		}
-	],
-	"orders": [
-		{
-			"id": 1,
-			"employeeId": 1,
-			"customerId": 1,
-			"orderDate": "2023-07-10",
-			"orderStatusId": 1,
-			"totalAmount": 500
-		},
-		{
-			"id": 2,
-			"employeeId": 2,
-			"customerId": 2,
-			"orderDate": "2023-07-12",
-			"orderStatusId": 3,
-			"totalAmount": 750
-		}
-	],
-	"orderStatuses": [
-		{
-			"id": 1,
-			"current": "Pending"
-		},
-		{
-			"id": 2,
-			"current": "EnRoute"
-		},
-		{
-			"id": 3,
-			"current": "Completed"
-		},
-		{
-			"id": 4,
-			"current": "Canceled"
-		}
-	],
-	"products": [
-		{
-			"id": 1,
-			"name": "Product A",
-			"description": "Description of Product A",
-			"unitPrice": 20,
-			"stockQuantity": 100,
-			"weightLbs": 2
-		},
-		{
-			"id": 2,
-			"name": "Product B",
-			"description": "Description of Product B",
-			"unitPrice": 15,
-			"stockQuantity": 50,
-			"weightLbs": 1
-		}
-	],
-	"orderItems": [
-		{
-			"id": 1,
-			"orderId": 1,
-			"productId": 1,
-			"quantity": 3,
-			"lineTotal": 60
-		},
-		{
-			"id": 2,
-			"orderId": 1,
-			"productId": 2,
-			"quantity": 2,
-			"lineTotal": 30
-		},
-		{
-			"id": 3,
-			"orderId": 2,
-			"productId": 1,
-			"quantity": 5,
-			"lineTotal": 100
-		}
-	],
-	"leads": [
-		{
-			"id": 1,
-			"assignedEmployeeId": 1,
-			"companyName": "LeadCo Inc.",
-			"contactFirstName": "John",
-			"contactLastName": "Doe",
-			"contactEmail": "john.doe@leadco.com",
-			"contactPhone": "555-111-2222",
-			"address": "123 Lead Street",
-			"companyPhone": "555-333-4444",
-			"leadStatusId": 1
-		},
-		{
-			"id": 2,
-			"assignedEmployeeId": 2,
-			"companyName": "ProspectCo",
-			"contactFirstName": "Jane",
-			"contactLastName": "Smith",
-			"contactEmail": "jane.smith@prospectco.com",
-			"contactPhone": "555-555-5555",
-			"address": "456 Prospect Avenue",
-			"companyPhone": "555-777-8888",
-			"leadStatusId": 2
-		}
-	],
-	"leadStatus": [
-		{
-			"id": 1,
-			"current": "Open"
-		},
-		{
-			"id": 2,
-			"current": "Converted"
-		}
-	],
-	"comments": [
-		{
-			"id": 1,
-			"employeeId": 1,
-			"noteDate": "2023-07-05",
-			"content": "Follow-up call scheduled.",
-			"refTable": "leads",
-			"refId": 1
-		},
-		{
-			"id": 2,
-			"employeeId": 2,
-			"noteDate": "2023-07-08",
-			"content": "Sent proposal via email.",
-			"refTable": "leads",
-			"refId": 2
-		}
-	],
-	"chatMessages": [
-		{
-			"id": 1,
-			"recipientId": 1,
-			"senderId": 2,
-			"messageDate": "2023-07-15",
-			"content": "Hi John! How can I assist you today?"
-		},
-		{
-			"id": 2,
-			"recipientId": 2,
-			"senderId": 1,
-			"messageDate": "2023-07-16",
-			"content": "Hello Jane! Is there anything I can help you with?"
-		}
-	],
-	"announcements": [
-		{
-			"id": 1,
-			"posterId": 1,
-			"announcementDate": "2023-07-10",
-			"content": "Team meeting scheduled for tomorrow at 2 PM."
-		},
-		{
-			"id": 2,
-			"posterId": 2,
-			"announcementDate": "2023-07-12",
-			"content": "Reminder: Submit weekly reports by Friday."
-		}
-	],
-	"usersUserRoles": [
-		{
-			"usersId": 1,
-			"userRolesUserId": 1
-		},
-		{
-			"usersId": 2,
-			"userRolesUserId": 2
-		}
-	]
+  "users": [
+    {
+      "firstName": "Jeane",
+      "lastName": "Layton",
+      "phone": "555-654-5858",
+      "email": "jlayton@buinesssolutions.com",
+      "id": 4
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Scott",
+      "phone": "555-654-5858",
+      "email": "mscott@dundermifflinpaper.com",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "firstName": "Jim",
+      "lastName": "Halpert",
+      "phone": "555-123-4567",
+      "email": "jhalpert@dundermifflinpaper.com"
+    },
+    {
+      "id": 6,
+      "firstName": "Pam",
+      "lastName": "Beesly",
+      "phone": "555-987-6543",
+      "email": "pbeesly@dundermifflinpaper.com"
+    },
+    {
+      "firstName": "Dwight",
+      "lastName": "Schrute",
+      "phone": "555-789-1234",
+      "email": "dschrute@dundermifflinpaper.com",
+      "id": 7
+    },
+    {
+      "firstName": "Angela",
+      "lastName": "Martin",
+      "phone": "555-567-8901",
+      "email": "amartin@dundermifflinpaper.com",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "firstName": "Kevin",
+      "lastName": "Malone",
+      "phone": "555-234-5678",
+      "email": "kmalone@dundermifflinpaper.com"
+    },
+    {
+      "id": 10,
+      "firstName": "Oscar",
+      "lastName": "Martinez",
+      "phone": "555-432-7654",
+      "email": "omartinez@dundermifflinpaper.com"
+    },
+    {
+      "id": 11,
+      "firstName": "Andy",
+      "lastName": "Bernard",
+      "phone": "555-876-5432",
+      "email": "abernard@dundermifflinpaper.com"
+    },
+    {
+      "id": 12,
+      "firstName": "Stanley",
+      "lastName": "Hudson",
+      "phone": "555-654-9876",
+      "email": "shudson@dundermifflinpaper.com"
+    },
+    {
+      "firstName": "Alex",
+      "lastName": "Johnson",
+      "phone": "555-555-4567",
+      "id": 13
+    },
+    {
+      "firstName": "Randy",
+      "lastName": "Newman",
+      "phone": "555-444-8653",
+      "id": 14
+    },
+    {
+      "firstName": "Guillermo ",
+      "lastName": "Del Toro",
+      "phone": "555-777-2222",
+      "id": 15
+    }
+  ],
+  "userRoles": [
+    {
+      "userId": 5,
+      "roleId": 2,
+      "id": 10
+    },
+    {
+      "userId": 5,
+      "roleId": 4,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "roleId": 2,
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "roleId": 4,
+      "id": 16
+    },
+    {
+      "userId": 6,
+      "roleId": 2,
+      "id": 15
+    },
+    {
+      "userId": 6,
+      "roleId": 9,
+      "id": 16
+    },
+    {
+      "userId": 9,
+      "roleId": 2,
+      "id": 21
+    },
+    {
+      "userId": 9,
+      "roleId": 8,
+      "id": 22
+    },
+    {
+      "userId": 10,
+      "roleId": 2,
+      "id": 23
+    },
+    {
+      "userId": 10,
+      "roleId": 7,
+      "id": 24
+    },
+    {
+      "userId": 11,
+      "roleId": 2,
+      "id": 25
+    },
+    {
+      "userId": 11,
+      "roleId": 4,
+      "id": 26
+    },
+    {
+      "userId": 12,
+      "roleId": 4,
+      "id": 27
+    },
+    {
+      "userId": 12,
+      "roleId": 2,
+      "id": 28
+    },
+    {
+      "userId": 7,
+      "roleId": 2,
+      "id": 29
+    },
+    {
+      "userId": 7,
+      "roleId": 4,
+      "id": 30
+    },
+    {
+      "userId": 8,
+      "roleId": 7,
+      "id": 33
+    },
+    {
+      "userId": 8,
+      "roleId": 2,
+      "id": 35
+    },
+    {
+      "userId": 4,
+      "roleId": 5,
+      "id": 36
+    },
+    {
+      "userId": 4,
+      "roleId": 2,
+      "id": 37
+    }
+  ],
+  "customers": [
+    {
+      "companyName": "XYZ Corp",
+      "address": "456 Oak Avenue",
+      "companyPhone": "555-123-5555",
+      "userId": 2,
+      "leadId": 2,
+      "id": 2
+    },
+    {
+      "companyName": "TechSolutions Inc",
+      "address": "789 Silicon Avenue",
+      "companyPhone": "555-789-4567",
+      "contactFirstName": "Alex",
+      "contactLastName": "Johnson",
+      "contactEmail": "ajohnson@techsolutions.com",
+      "contactPhone": "555-555-4567",
+      "userId": 0,
+      "id": 3
+    },
+    {
+      "companyName": "InnovateTech Solutions",
+      "address": "234 Innovation Lane",
+      "companyPhone": "555-444-5678",
+      "contactFirstName": "Randy",
+      "contactLastName": "Newman",
+      "contactEmail": "rnewman@innovatetech.com",
+      "contactPhone": "555-444-8653",
+      "userId": 0,
+      "id": 4
+    },
+    {
+      "companyName": "GreenEco Enterprises",
+      "address": "567 Sustainable Street",
+      "companyPhone": "555-777-8888",
+      "contactFirstName": "Guillermo ",
+      "contactLastName": "Del Toro",
+      "contactEmail": "gdeltoro@greeneco.com",
+      "contactPhone": "555-777-2222",
+      "userId": 0,
+      "id": 5
+    }
+  ],
+  "employees": [
+    {
+      "userId": 4,
+      "payRate": 30,
+      "gender": "Male",
+      "hireDate": "2023-07-24",
+      "locationId": 1,
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "payRate": 30,
+      "gender": "Male",
+      "hireDate": "2023-07-20",
+      "locationId": 1,
+      "id": 29
+    },
+    {
+      "userId": 6,
+      "payRate": 30,
+      "gender": "Female",
+      "hireDate": "2023-06-15",
+      "locationId": 1,
+      "id": 30
+    },
+    {
+      "userId": 7,
+      "payRate": 35,
+      "gender": "Male",
+      "hireDate": "2023-08-02",
+      "locationId": 1,
+      "id": 31
+    },
+    {
+      "userId": 8,
+      "payRate": 28,
+      "gender": "Female",
+      "hireDate": "2023-07-10",
+      "locationId": 1,
+      "id": 32
+    },
+    {
+      "userId": 9,
+      "payRate": 25,
+      "gender": "Male",
+      "hireDate": "2023-09-01",
+      "locationId": 1,
+      "id": 33
+    },
+    {
+      "userId": 10,
+      "payRate": 30,
+      "gender": "Male",
+      "hireDate": "2023-07-28",
+      "locationId": 1,
+      "id": 34
+    },
+    {
+      "userId": 11,
+      "payRate": 32,
+      "gender": "Male",
+      "hireDate": "2023-08-15",
+      "locationId": 1,
+      "id": 35
+    },
+    {
+      "userId": 12,
+      "payRate": 29,
+      "gender": "Male",
+      "hireDate": "2023-09-10",
+      "locationId": 1,
+      "id": 36
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Scranton Branch",
+      "address": "789 Elm Street",
+      "phone": "555-789-1234",
+      "managerId": 1
+    },
+    {
+      "id": 2,
+      "name": "New York Branch",
+      "address": "321 Maple Avenue",
+      "phone": "555-456-7890",
+      "managerId": 2
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "Admin"
+    },
+    {
+      "id": 2,
+      "name": "Employee"
+    },
+    {
+      "id": 3,
+      "name": "Customer"
+    },
+    {
+      "id": 4,
+      "name": "Salesperson"
+    },
+    {
+      "id": 5,
+      "name": "Manager"
+    },
+    {
+      "id": 6,
+      "name": "DeliveryPerson"
+    },
+    {
+      "id": 7,
+      "name": "Human Resources"
+    },
+    {
+      "id": 8,
+      "name": "Accounting"
+    },
+    {
+      "id": 9,
+      "name": "Reception"
+    }
+  ],
+  "orders": [
+    {
+      "employeeId": 4,
+      "customerId": 2,
+      "orderDate": 1690470333927,
+      "orderStatusId": 1,
+      "totalAmount": 1200,
+      "id": 1
+    },
+    {
+      "employeeId": 4,
+      "customerId": 2,
+      "orderDate": 1690472505545,
+      "orderStatusId": 1,
+      "totalAmount": 1180,
+      "id": 2
+    },
+    {
+      "employeeId": 5,
+      "customerId": 3,
+      "orderDate": 1693420932821,
+      "orderStatusId": 1,
+      "totalAmount": 2100,
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "name": "Heavy Stock Paper",
+      "description": "It's a heavier stock than usual.",
+      "unitPrice": 20,
+      "stockQuantity": 40,
+      "weightLbs": 2,
+      "id": 1
+    },
+    {
+      "name": "Dunder Mifflin Office Supplies Bundle",
+      "description": "A bundle of essential office supplies, including pens, notepads, and more.",
+      "unitPrice": 30,
+      "stockQuantity": 100,
+      "weightLbs": 1.5,
+      "id": 2
+    },
+    {
+      "name": "Dunder Mifflin Premium Paper",
+      "description": "High-quality paper for all your printing needs.",
+      "unitPrice": 10,
+      "stockQuantity": 500,
+      "weightLbs": 5,
+      "id": 3
+    },
+    {
+      "name": "Dunder Mifflin Multifunction Printer",
+      "description": "A versatile printer for all your office printing, scanning, and copying needs.",
+      "unitPrice": 300,
+      "stockQuantity": 17,
+      "weightLbs": 40,
+      "id": 4
+    },
+    {
+      "name": "Dunder Mifflin Ergonomic Office Chair",
+      "description": "An adjustable and comfortable chair for long hours of work.",
+      "unitPrice": 150,
+      "stockQuantity": 30,
+      "weightLbs": 25,
+      "id": 5
+    },
+    {
+      "name": "Dunder Mifflin Breakroom Snack Pack",
+      "description": "A selection of snacks and beverages to keep your team energized throughout the day.",
+      "unitPrice": 50,
+      "stockQuantity": 50,
+      "weightLbs": 15,
+      "id": 6
+    }
+  ],
+  "orderItems": [
+    {
+      "orderId": 1,
+      "productId": 2,
+      "quantity": 20,
+      "lineTotal": 600,
+      "id": 1
+    },
+    {
+      "orderId": 1,
+      "productId": 1,
+      "quantity": 30,
+      "lineTotal": 600,
+      "id": 2
+    },
+    {
+      "orderId": 2,
+      "productId": 1,
+      "quantity": 38,
+      "lineTotal": 760,
+      "id": 3
+    },
+    {
+      "orderId": 2,
+      "productId": 2,
+      "quantity": 14,
+      "lineTotal": 420,
+      "id": 4
+    },
+    {
+      "orderId": 6,
+      "productId": 4,
+      "quantity": 3,
+      "lineTotal": 900,
+      "id": 11
+    },
+    {
+      "orderId": 6,
+      "productId": 1,
+      "quantity": 60,
+      "lineTotal": 1200,
+      "id": 12
+    }
+  ],
+  "leads": [
+    {
+      "companyName": "Prestige World Wide",
+      "contactFirstName": "John",
+      "contactLastName": "Doe",
+      "contactEmail": "john.doe@leadco.com",
+      "contactPhone": "555-111-2222",
+      "address": "123 Lead Street",
+      "companyPhone": "555-333-4444",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "companyName": "Buisness Solutions LLC",
+      "contactFirstName": "Jeane",
+      "contactLastName": "Layton",
+      "contactEmail": "JLayton@buinesssolutions.com",
+      "contactPhone": "555-555-5555",
+      "address": "456 Prospect Avenue",
+      "companyPhone": "555-777-8888",
+      "assignedEmployeeId": 5
+    },
+    {
+      "companyName": "TechSolutions Inc",
+      "contactName": "Alex Johnson",
+      "contactEmail": "ajohnson@techsolutions.com",
+      "contactPhone": "555-555-1234",
+      "address": "789 Silicon Avenue",
+      "companyPhone": "555-789-4567",
+      "id": 6
+    },
+    {
+      "companyName": "CreativeDesigns Co",
+      "contactName": "Emily Roberts",
+      "contactEmail": "eroberts@creativedesigns.com",
+      "contactPhone": "555-222-3333",
+      "address": "123 Artistic Street",
+      "companyPhone": "555-888-9999",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 2,
+      "userId": 2,
+      "noteDate": 1690303245643,
+      "content": "Sent proposal via email.",
+      "refTable": "leads",
+      "refId": 2
+    },
+    {
+      "userId": 4,
+      "noteDate": 1690559412163,
+      "content": "This should be a new comment",
+      "refTable": "leads",
+      "refId": 1,
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "noteDate": 1690560175019,
+      "content": "This Order is super late",
+      "refTable": "customers",
+      "refId": 2,
+      "id": 5
+    },
+    {
+      "userId": 4,
+      "noteDate": 1690560291320,
+      "content": "the comment system works here",
+      "refTable": "orders",
+      "refId": 1,
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "noteDate": 1690560337635,
+      "content": "here is a comment",
+      "refTable": "products",
+      "refId": 1,
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "noteDate": 1690575529810,
+      "content": "ne comment 2",
+      "refTable": "products",
+      "refId": 2,
+      "id": 9
+    },
+    {
+      "userId": 4,
+      "noteDate": 1690662340673,
+      "content": "This is a comment.",
+      "refTable": "leads",
+      "refId": 1,
+      "id": 10
+    },
+    {
+      "userId": 4,
+      "noteDate": 1692110401928,
+      "content": "This is really cool",
+      "refTable": "customers",
+      "refId": 2,
+      "id": 12
+    }
+  ],
+  "chatMessages": [
+    {
+      "recipientId": 5,
+      "senderId": 4,
+      "messageDate": 1691005328741,
+      "content": "hey dwight",
+      "conversationId": 4,
+      "id": 7
+    },
+    {
+      "recipientId": 5,
+      "senderId": 4,
+      "messageDate": 1691005367037,
+      "content": "What are you doing right now?",
+      "conversationId": 4,
+      "id": 8
+    },
+    {
+      "recipientId": 6,
+      "senderId": 4,
+      "messageDate": 1691005416743,
+      "content": "awoinm asdf vdder",
+      "conversationId": 6,
+      "id": 9
+    },
+    {
+      "recipientId": 10,
+      "senderId": 4,
+      "messageDate": 1691086319892,
+      "content": "no more cake in the break room thank you",
+      "conversationId": 7,
+      "id": 18
+    },
+    {
+      "recipientId": 5,
+      "senderId": 1,
+      "messageDate": 1692049448043,
+      "content": "Hey!",
+      "conversationId": 8,
+      "id": 19
+    },
+    {
+      "recipientId": 10,
+      "senderId": 4,
+      "messageDate": 1692110544002,
+      "content": "hey oscar",
+      "conversationId": 7,
+      "id": 20
+    },
+    {
+      "recipientId": 8,
+      "senderId": 4,
+      "messageDate": 1692110556429,
+      "content": "no cats in the office",
+      "conversationId": 9,
+      "id": 21
+    }
+  ],
+  "conversations": [
+    {
+      "user_1": 4,
+      "user_2": 5,
+      "id": 4
+    },
+    {
+      "user_1": 4,
+      "user_2": 7,
+      "id": 5
+    },
+    {
+      "user_1": 4,
+      "user_2": 6,
+      "id": 6
+    },
+    {
+      "user_1": 4,
+      "user_2": 10,
+      "id": 7
+    },
+    {
+      "user_1": 4,
+      "user_2": 8,
+      "id": 9
+    }
+  ],
+  "announcements": [
+    {
+      "id": 1,
+      "posterId": 4,
+      "announcementDate": 1690303245260,
+      "content": "Team meeting scheduled for tomorrow at 2 PM."
+    },
+    {
+      "id": 2,
+      "posterId": 4,
+      "announcementDate": 1690303245260,
+      "content": "Reminder: Submit weekly reports by Friday."
+    },
+    {
+      "posterId": 4,
+      "announcementDate": 1690470084532,
+      "content": "Chili today!",
+      "id": 4
+    }
+  ]
 }
